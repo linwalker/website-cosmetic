@@ -1,0 +1,21 @@
+{
+  "name": "website-cosmetic",
+  "version": "1.0.0",
+  "description": "website for cosmetic",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linwalker/website-cosmetic.git"
+  },
+  "keywords": [
+    "koa-react-redux-mongodb"
+  ],
+  "author": "linwalker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linwalker/website-cosmetic/issues"
+  },
+  "homepage": "https://github.com/linwalker/website-cosmetic#readme"
+}
