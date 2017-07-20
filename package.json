@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "website for cosmetic",
   "scripts": {
+    "start": "node bin/development.js",
+    "production": "node bin/production.js",
+    "build": "npm run clean && webpack --config webpack.build.js",
+    "clean": "rm -rf public/build/ && rm -rf dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
