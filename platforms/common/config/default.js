@@ -8,12 +8,12 @@ export default {
   rootPath,
   publicPath: '/public',
   staticPath: '/public/static',
-  port: 3099,
-  db: {
-    dialect: 'sqlite',
-    username: '',
-    password: '',
-    database: 'main',
-    storage: 'path/to/db.sqlite'
-  }
+  port: 3088,
+  // db: {
+  //   dialect: 'sqlite',
+  //   username: '',
+  //   password: '',
+  //   database: 'main',
+  //   storage: 'path/to/db.sqlite'
+  // }
 }

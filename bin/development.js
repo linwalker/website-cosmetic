@@ -62,7 +62,7 @@ app.on('error', function (err, ctx) {
 // listen
 var server = require('http').createServer(app.callback())
 var watcher = chokidar.watch([
-  path.join(__dirname, '../app'),
+  // path.join(__dirname, '../app'),
   path.join(__dirname, '../platforms')
 ])
 watcher.on('ready', function () {

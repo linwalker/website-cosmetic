@@ -2,6 +2,9 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
+import configureStore from '../../app/common/store/configureStore';
+
+const store = configureStore();
 
 export default async (ctx, next) => {
     let _renderProps;
@@ -13,11 +16,12 @@ export default async (ctx, next) => {
     if (_renderProps) {
         await ctx.render('index', {
             app: renderToString(
-                <Provider>
+                <Provider store={store}>
                     <RouterContext {..._renderProps} />
                 </Provider>
             ),
-            dev: ctx.app.env === 'development'
+            dev: ctx.app.env === 'development',
+            state: store.getState()
         })
     } else {
         await next();

@@ -13,6 +13,13 @@
     <section role="main" class="react-container">
       <div><%- app %></div>
     </section>
+    <script>
+        try {
+            window.__REDUX_STATE__ = <%- JSON.stringify(state) %>;
+        } catch (e) {
+            console.warn('error in getting server redux data')
+        }
+    </script>
     <script src="/build/common.js"></script>
     <script src="/build/main.js"></script>
 </body>
