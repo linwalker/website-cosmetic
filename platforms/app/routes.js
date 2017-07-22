@@ -1,10 +1,10 @@
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import React from 'react'
 
-import App from './containers/App'
-import News from './containers/News'
+import App from './containers/App/App'
+import News from './containers/News/News'
 // import About from './containers/About'
-import Home from './containers/Home'
+import Home from './containers/Home/Home'
 // import Testpage from './containers/Testpage'
 
 export default (

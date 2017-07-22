@@ -7,7 +7,7 @@ import { Menu, Breadcrumb } from 'antd';
 // import Sidebar from '../components/Sidebar'
 // import { fetchServerStateIfNeeded } from '../actions/serverState'
 import 'antd/dist/antd.css'
-import '../common/css/layout.less'
+import '../../common/css/layout.less'
 
 export default class App extends Component {
 
