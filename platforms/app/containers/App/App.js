@@ -1,45 +1,65 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import { Menu, Breadcrumb } from 'antd';
-// import Header from '../components/Header'
-// import Footer from '../components/Footer'
-// import Sidebar from '../components/Sidebar'
+import { Menu, Breadcrumb, Layout, Row, Col } from 'antd';
 // import { fetchServerStateIfNeeded } from '../actions/serverState'
 import 'antd/dist/antd.css'
-import '../../common/css/layout.less'
-
+import './App.css';
+const { Header, Content, Footer } = Layout;
 export default class App extends Component {
-
-  render () {
-    const currentMenu = this.props.location.pathname.replace('/','') || 'home';
+  constructor(props) {
+    super(props);
+    this.state = {
+      toggle: false
+    }
+  }
+  toggleShow = () => {
+    this.setState({
+      toggle: !this.state.toggle
+    })
+  }
+  render() {
+    const currentMenu = this.props.location.pathname.replace('/', '') || 'home';
     return (
-      <div>
-        <div className="ant-layout-top">
-          <div className="ant-layout-header">
-            <div className="ant-layout-wrapper">
-              <div className="ant-layout-logo"><img src="//7xi480.com1.z0.glb.clouddn.com/avatar100.jpg" width="50" /></div>
-              <Menu theme="dark" mode="horizontal" style={{lineHeight: '64px'}} selectedKeys={[currentMenu]}>
-                <Menu.Item key="home"><Link to="/" >Home</Link></Menu.Item>
-                <Menu.Item key="news"><Link to="/news" >News</Link></Menu.Item>
-                <Menu.Item key="about"><Link to="/about" >About</Link></Menu.Item>
-                <Menu.Item key="test"><Link to="/test" >Testpage</Link></Menu.Item>
-              </Menu>
+      <Layout className="layout">
+          <Header style={{background: '#fff'}}>
+            <i className="nav-phone-icon" onClick={this.toggleShow}></i>
+            <Row>
+              <Col xs={24} sm={24} md={5} lg={4}>
+                logo
+              </Col>
+              <Col xs={0} sm={0} md={19} lg={20}>
+                <Menu theme="light" mode="horizontal" style={{ lineHeight: '64px' }} selectedKeys={[currentMenu]}>
+                  <Menu.Item key="home"><Link to="/" >Home</Link></Menu.Item>
+                  <Menu.Item key="news"><Link to="/news" >News</Link></Menu.Item>
+                  <Menu.Item key="about"><Link to="/about" >About</Link></Menu.Item>
+                  <Menu.Item key="test"><Link to="/test" >Testpage</Link></Menu.Item>
+                </Menu>
+              </Col>
+            </Row>
+
+          </Header>
+          <Content>
+            {
+              this.state.toggle ? 
+                <Menu theme="light" mode="vertical" style={{ lineHeight: '64px' }} selectedKeys={[currentMenu]} onClick={this.toggleShow}>
+                  <Menu.Item key="home"><Link to="/" >Home</Link></Menu.Item>
+                  <Menu.Item key="news"><Link to="/news" >News</Link></Menu.Item>
+                  <Menu.Item key="about"><Link to="/about" >About</Link></Menu.Item>
+                  <Menu.Item key="test"><Link to="/test" >Testpage</Link></Menu.Item>
+                </Menu>
+                :
+                ''
+            }
+            <div style={{ minHeight: 900, padding: '20px 50px' }}>
+              {this.props.children}
             </div>
-          </div>
-          <div className="ant-layout-wrapper">
-            <div className="ant-layout-container">
-              <div style={{ minHeight: 900 }}>
-                {this.props.children }
-              </div>
-            </div>
-          </div>
-          <div className="ant-layout-footer">
-          Ant Design 版权所有 © 2015 由蚂蚁金服体验技术部支持
-          </div>
-        </div>
-      </div>
-    )
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            Ant Design ©2016 Created by Ant UED
+        </Footer>
+      </Layout>
+        )
   }
 
 }

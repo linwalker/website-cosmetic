@@ -1,0 +1,29 @@
+.nav-phone-icon {
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 24px;
+    z-index: 1;
+    width: 16px;
+    height: 22px;
+    cursor: pointer;
+}
+@media only screen and (max-width: 992px) and (min-width: 0) {
+    .nav-phone-icon:before {
+        content: "";
+        display: block;
+        border-radius: 2px;
+        width: 16px;
+        height: 2px;
+        background: #777;
+        box-shadow: 0 6px 0 0 #777, 0 12px 0 0 #777;
+        position: absolute;
+    }
+}
+@media only screen and (max-width: 992px) and (min-width: 0) {
+    .nav-phone-icon {
+        display: block;
+    }
+}
+
+
