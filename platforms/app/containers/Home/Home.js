@@ -37,16 +37,16 @@ class Home extends Component{
       <div>
         <Carousel autoplay>
           <div >
-            <img style={{width: '100%'}} src="http://www.yuesai.com/Content/Upload/Banner/20170719200626sskna354.jpg" alt=""/>
+            <img className="bannerImg" src="http://www.yuesai.com/Content/Upload/Banner/20170719200626sskna354.jpg" alt=""/>
           </div>
           <div >
-            <img  style={{width: '100%'}} src="http://www.yuesai.com/Content/Upload/Banner/20170719200222pvsqnavs.jpg" alt=""/>
+            <img className="bannerImg" src="http://www.yuesai.com/Content/Upload/Banner/20170719200222pvsqnavs.jpg" alt=""/>
           </div>
           <div >
-            <img  style={{width: '100%'}} src="http://www.yuesai.com/Content/Upload/Banner/20170703144956rjni53ae.jpg" alt=""/>
+            <img className="bannerImg" src="http://www.yuesai.com/Content/Upload/Banner/20170703144956rjni53ae.jpg" alt=""/>
           </div>
           <div >
-            <img  style={{width: '100%'}} src="http://www.yuesai.com/Content/Upload/Banner/2017030811451324cm4cyx.jpg" alt=""/>
+            <img className="bannerImg" src="http://www.yuesai.com/Content/Upload/Banner/2017030811451324cm4cyx.jpg" alt=""/>
           </div>
         </Carousel>
         <div>
