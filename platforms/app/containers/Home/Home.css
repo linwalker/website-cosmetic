@@ -1,0 +1,4 @@
+.ant-carousel .slick-slide {
+  max-height: 460px;
+  overflow: hidden;
+}

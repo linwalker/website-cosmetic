@@ -51,7 +51,7 @@ export default class App extends Component {
                 :
                 ''
             }
-            <div style={{ minHeight: 900, padding: '20px 50px' }}>
+            <div style={{ minHeight: 900}}>
               {this.props.children}
             </div>
           </Content>
