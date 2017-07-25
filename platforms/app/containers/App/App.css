@@ -26,4 +26,37 @@
     }
 }
 
+.footer_mall {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer_mall a {
+    display: inline-block;
+    height: 38px;
+    width: 38px;
+    background: url('http://www.yuesai.com/Content/assets_mobi/images/f_mall_i.png') no-repeat 0 0;
+    padding: 0;
+    margin: 0 2px;
+}
+
+.footer_mall a.ma1 {
+    background-position: 0 0;
+}
+
+.footer_mall a.ma4 {
+    background-position: -138px 0;
+}
+
+.footer_mall a.ma5 {
+    background-position: -184px 0;
+}
+
+.footer_mall a.ma6 {
+    background-position: -230px 0;
+}
 

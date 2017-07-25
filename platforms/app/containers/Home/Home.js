@@ -61,14 +61,14 @@ class Home extends Component {
             </picture>
           </div>
         </Carousel>
-        <div>
+        {/*<div>
           <h3>首页</h3>
           <div>ID：{id}</div>
           <div>名称：{username}</div>
           <div>手机：{mobile}</div>
           <div>邮箱：{email}</div>
           <div>居住地：{county}</div>
-        </div>
+        </div>*/}
       </div>
     )
   }
