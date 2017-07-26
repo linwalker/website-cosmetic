@@ -1,11 +1,15 @@
-.ant-carousel .slick-slide {
-  /*max-height: 460px;*/
-  /*overflow: hidden;*/
-}
 
 .bannerImg {
     width: 100%;
+    height: 100%;
 }
-@media only screen and (max-width: 992px) and (min-width: 0) {
 
+.bigPic {
+  height: 460px;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 0) {
+  .bigPic {
+    height: 110px;
+  }
 }

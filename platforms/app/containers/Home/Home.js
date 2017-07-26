@@ -61,14 +61,20 @@ class Home extends Component {
             </picture>
           </div>
         </Carousel>
-        {/*<div>
-          <h3>首页</h3>
-          <div>ID：{id}</div>
-          <div>名称：{username}</div>
-          <div>手机：{mobile}</div>
-          <div>邮箱：{email}</div>
-          <div>居住地：{county}</div>
-        </div>*/}
+        <div className='content'>
+          <div className="bigPic">
+            <picture>
+              <source srcSet="http://www.yuesai.com/Content/Upload/Banner/20170317042821y1ux11sm.jpg" media="(max-width: 900px)" />
+              <img className="bannerImg" srcSet="http://www.yuesai.com/Content/Upload/Banner/20170703145727ogvrpydr.png" alt="pic" />
+            </picture>
+          </div>
+          <div className="bigPic">
+            <picture>
+              <source srcSet="http://www.yuesai.com/Content/Upload/Banner/20170317042836lhopwuni.jpg" media="(max-width: 900px)" />
+              <img className="bannerImg" srcSet="http://www.yuesai.com/Content/Upload/Banner/20170308091818gv5wtnuy.jpg" alt="pic" />
+            </picture>
+          </div>
+        </div>
       </div>
     )
   }
