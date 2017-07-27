@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Carousel } from 'antd';
+import { Carousel, Row, Col } from 'antd';
 import * as serverActions from '../../common/actions/serverState';
 
 import './Home.css';
@@ -23,6 +23,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    console.log(serverActions)
     const { loaded } = this.props
     if (!loaded) {
       this.props.fetchServerStateIfNeeded(this.props)
@@ -62,6 +63,20 @@ class Home extends Component {
           </div>
         </Carousel>
         <div className='content'>
+          <div className='catalogue'>
+            {/*<Row>
+              <Col xs={8} className='catalogue_item'>
+                护肤
+              </Col>
+              <Col xs={8} className='catalogue_item'>
+                彩妆
+              </Col>
+              <Col xs={8} className='catalogue_item'>
+                美容
+              </Col>
+            </Row>*/}
+            <img src="http://www.yuesai.com/Content/assets_mobi/images/home/btn_bg.jpg" alt=""/>
+          </div>
           <div className="bigPic">
             <picture>
               <source srcSet="http://www.yuesai.com/Content/Upload/Banner/20170317042821y1ux11sm.jpg" media="(max-width: 900px)" />
@@ -74,6 +89,14 @@ class Home extends Component {
               <img className="bannerImg" srcSet="http://www.yuesai.com/Content/Upload/Banner/20170308091818gv5wtnuy.jpg" alt="pic" />
             </picture>
           </div>
+          <Row>
+            <Col span={12} className='smallPic'>
+              <img src="http://www.sulwhasoo.com/cn/zh/_jcr_content/banner/image1.jpg/1467698906078.jpg" alt=""/>
+            </Col>
+            <Col span={12} className='smallPic'>
+              <img src="http://www.sulwhasoo.com/cn/zh/_jcr_content/banner/image2.jpg/1467698906078.jpg" alt=""/>
+            </Col>
+          </Row>
         </div>
       </div>
     )

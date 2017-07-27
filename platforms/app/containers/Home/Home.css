@@ -8,8 +8,30 @@
   height: 460px;
 }
 
+.catalogue {
+  display: none;
+}
+
+.smallPic {
+  height: 410px;
+}
+.smallPic img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 900px) and (min-width: 0) {
   .bigPic {
     height: 110px;
   }
+  .smallPic {
+    height: 119px;
+  }
+  .catalogue {
+    display: block;
+    height: 50px;
+  }
+  .catalogue img {
+    width: 100%;
+  }
 }
+
