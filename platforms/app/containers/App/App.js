@@ -30,10 +30,10 @@ export default class App extends Component {
               </Col>
             <Col xs={0} sm={0} md={19} lg={20}>
               <Menu theme="light" mode="horizontal" style={{ lineHeight: '64px' }} selectedKeys={[currentMenu]}>
-                <Menu.Item key="home"><Link to="/" >Home</Link></Menu.Item>
-                <Menu.Item key="news"><Link to="/news" >News</Link></Menu.Item>
-                <Menu.Item key="about"><Link to="/about" >About</Link></Menu.Item>
-                <Menu.Item key="test"><Link to="/test" >Testpage</Link></Menu.Item>
+                <Menu.Item key="home"><Link to="/" >首页</Link></Menu.Item>
+                <Menu.Item key="news"><Link to="/news" >护肤</Link></Menu.Item>
+                <Menu.Item key="about"><Link to="/about" >彩妆</Link></Menu.Item>
+                <Menu.Item key="test"><Link to="/test" >美容</Link></Menu.Item>
               </Menu>
             </Col>
           </Row>
@@ -43,30 +43,30 @@ export default class App extends Component {
           {
             this.state.toggle ?
               <Menu theme="light" mode="vertical" style={{ lineHeight: '64px' }} selectedKeys={[currentMenu]} onClick={this.toggleShow}>
-                <Menu.Item key="home"><Link to="/" >Home</Link></Menu.Item>
-                <Menu.Item key="news"><Link to="/news" >News</Link></Menu.Item>
-                <Menu.Item key="about"><Link to="/about" >About</Link></Menu.Item>
-                <Menu.Item key="test"><Link to="/test" >Testpage</Link></Menu.Item>
+                <Menu.Item key="home"><Link to="/" >首页</Link></Menu.Item>
+                <Menu.Item key="news"><Link to="/news" >护肤</Link></Menu.Item>
+                <Menu.Item key="about"><Link to="/about" >彩妆</Link></Menu.Item>
+                <Menu.Item key="test"><Link to="/test" >美容</Link></Menu.Item>
               </Menu>
               :
               ''
           }
-          <div style={{ minHeight: '900px' }}>
+          <div style={{ }}>
             {this.props.children}
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
           <Row>
-            <Col xs={24} sm={24} md={6} lg={6}>
+            <Col xs={24} sm={24} md={6} lg={6} className='footlink'>
               官方微信
               </Col>
-            <Col xs={24} sm={24} md={6} lg={6}>
+            <Col xs={24} sm={24} md={6} lg={6} className='footlink'>
               官方微博
               </Col>
-            <Col xs={24} sm={24} md={6} lg={6}>
+            <Col xs={24} sm={24} md={6} lg={6} className='footlink'>
               联系我们
               </Col>
-            <Col xs={24} sm={24} md={6} lg={6}>
+            <Col xs={24} sm={24} md={6} lg={6} className='footlink'>
               <div>网上商城</div>
               <div className="footer_mall">
                 <a rel="nofollow" href="https://yuesai.tmall.com/" className="ma1 ga-link" target="_blank" data-model="MB_footer" data-action-label="EC_Tmall" data-label="EC_Tmall"></a>

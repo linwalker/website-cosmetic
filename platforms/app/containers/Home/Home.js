@@ -89,7 +89,7 @@ class Home extends Component {
               <img className="bannerImg" srcSet="http://www.yuesai.com/Content/Upload/Banner/20170308091818gv5wtnuy.jpg" alt="pic" />
             </picture>
           </div>
-          <Row>
+          <Row className="smallPicBox">
             <Col span={12} className='smallPic'>
               <img src="http://www.sulwhasoo.com/cn/zh/_jcr_content/banner/image1.jpg/1467698906078.jpg" alt=""/>
             </Col>

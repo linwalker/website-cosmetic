@@ -26,6 +26,10 @@
     }
 }
 
+.footlink {
+    line-height: 28px;
+}
+
 .footer_mall {
     overflow: hidden;
     position: relative;
