@@ -26,7 +26,7 @@ export default class App extends Component {
           <i className="nav-phone-icon" onClick={this.toggleShow}></i>
           <Row>
             <Col xs={24} sm={24} md={5} lg={4}>
-              佳沃logo
+              佳沃
               </Col>
             <Col xs={0} sm={0} md={19} lg={20}>
               <Menu theme="light" mode="horizontal" style={{ lineHeight: '64px' }} selectedKeys={[currentMenu]}>
